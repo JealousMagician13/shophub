@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - ShopHub</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo"><h1>ShopHub</h1></div>
+        <nav class="nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="help.html">Help</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <button id="loginBtn" class="btn-secondary" onclick="showAuthModal()">Login</button>
+          <button id="cartBtn" class="btn-primary" onclick="goToCart()">Cart <span id="cartCount">0</span></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" style="padding: 60px 20px;">
+    <div style="max-width: 800px; margin: 0 auto;">
+      <h1 style="margin-bottom: 30px; text-align: center; font-size: 36px;">About ShopHub</h1>
+
+      <section style="margin-bottom: 40px;">
+        <h2 style="margin-bottom: 15px;">Our Mission</h2>
+        <p style="color: #6b7280; line-height: 1.8; margin-bottom: 15px;">
+          ShopHub is dedicated to providing customers with a seamless online shopping experience. We believe in quality products, excellent customer service, and fast, reliable shipping.
+        </p>
+      </section>
+
+      <section style="margin-bottom: 40px;">
+        <h2 style="margin-bottom: 15px;">Why Choose ShopHub?</h2>
+        <ul style="list-style: none; color: #6b7280;">
+          <li style="margin-bottom: 12px; padding-left: 25px; position: relative;">
+            <span style="position: absolute; left: 0; color: var(--primary);">✓</span>
+            <strong>Quality Products:</strong> Carefully curated selection of premium items
+          </li>
+          <li style="margin-bottom: 12px; padding-left: 25px; position: relative;">
+            <span style="position: absolute; left: 0; color: var(--primary);">✓</span>
+            <strong>Fast Shipping:</strong> Delivery within 7-10 business days
+          </li>
+          <li style="margin-bottom: 12px; padding-left: 25px; position: relative;">
+            <span style="position: absolute; left: 0; color: var(--primary);">✓</span>
+            <strong>Great Prices:</strong> Competitive pricing without compromising quality
+          </li>
+          <li style="margin-bottom: 12px; padding-left: 25px; position: relative;">
+            <span style="position: absolute; left: 0; color: var(--primary);">✓</span>
+            <strong>24/7 Support:</strong> Dedicated customer service team
+          </li>
+        </ul>
+      </section>
+
+      <section style="margin-bottom: 40px;">
+        <h2 style="margin-bottom: 15px;">Our History</h2>
+        <p style="color: #6b7280; line-height: 1.8;">
+          Founded in 2020, ShopHub has grown to serve thousands of satisfied customers worldwide. We started with a simple goal: make quality products accessible and affordable for everyone. Today, we continue to expand our product range and improve our services based on customer feedback.
+        </p>
+      </section>
+
+      <section>
+        <h2 style="margin-bottom: 15px;">Get In Touch</h2>
+        <p style="color: #6b7280; margin-bottom: 15px;">
+          Have questions? We'd love to hear from you!
+        </p>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+          <div style="background-color: white; padding: 20px; border-radius: 8px;">
+            <h4 style="margin-bottom: 10px;">Email</h4>
+            <p style="color: #6b7280;"><a href="mailto:support@shophub.com" style="color: var(--primary); text-decoration: none;">support@shophub.com</a></p>
+          </div>
+          <div style="background-color: white; padding: 20px; border-radius: 8px;">
+            <h4 style="margin-bottom: 10px;">Phone</h4>
+            <p style="color: #6b7280;"><a href="tel:1-800-7464482" style="color: var(--primary); text-decoration: none;">1-800-SHOPHUB</a></p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>About ShopHub</h4>
+          <p>Your trusted online shopping destination with premium products and great prices.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="products.html">Shop</a></li>
+            <li><a href="help.html">Help & Support</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact</h4>
+          <p>Email: support@shophub.com</p>
+          <p>Phone: 1-800-SHOPHUB</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 ShopHub. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="authModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeAuthModal()">&times;</span>
+      <div class="auth-container">
+        <div class="auth-toggle">
+          <button class="tab-btn active" onclick="switchAuth('login')">Login</button>
+          <button class="tab-btn" onclick="switchAuth('signup')">Sign Up</button>
+        </div>
+        <form id="loginForm" class="auth-form active" onsubmit="handleLogin(event)">
+          <h3>Login to Your Account</h3>
+          <div class="form-group">
+            <label for="loginEmail">Email</label>
+            <input type="email" id="loginEmail" required>
+          </div>
+          <div class="form-group">
+            <label for="loginPassword">Password</label>
+            <input type="password" id="loginPassword" required>
+          </div>
+          <button type="submit" class="btn-primary btn-full">Login</button>
+        </form>
+        <form id="signupForm" class="auth-form" onsubmit="handleSignup(event)">
+          <h3>Create Your Account</h3>
+          <div class="form-group">
+            <label for="signupName">Full Name</label>
+            <input type="text" id="signupName" required>
+          </div>
+          <div class="form-group">
+            <label for="signupEmail">Email</label>
+            <input type="email" id="signupEmail" required>
+          </div>
+          <div class="form-group">
+            <label for="signupPassword">Password</label>
+            <input type="password" id="signupPassword" required>
+          </div>
+          <button type="submit" class="btn-primary btn-full">Sign Up</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="api.js"></script>
+  <script src="cart.js"></script>
+  <script src="app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      updateAuthUI();
+      window.onclick = (event) => {
+        const modal = document.getElementById('authModal');
+        if (event.target === modal) closeAuthModal();
+      };
+    });
+  </script>
+</body>
+</html>

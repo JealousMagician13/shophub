@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Help & Support - ShopHub</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo"><h1>ShopHub</h1></div>
+        <nav class="nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="help.html" class="active">Help</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <button id="loginBtn" class="btn-secondary" onclick="showAuthModal()">Login</button>
+          <button id="cartBtn" class="btn-primary" onclick="goToCart()">Cart <span id="cartCount">0</span></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" style="padding: 60px 20px;">
+    <div style="max-width: 800px; margin: 0 auto;">
+      <h1 style="margin-bottom: 30px; text-align: center; font-size: 36px;">Help & Support</h1>
+
+      <section style="margin-bottom: 40px;">
+        <h2 style="margin-bottom: 20px;">Frequently Asked Questions</h2>
+
+        <div style="background-color: white; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+          <details style="padding: 20px; border-bottom: 1px solid #e5e7eb;">
+            <summary style="cursor: pointer; font-weight: 600; color: var(--primary);">How do I place an order?</summary>
+            <p style="margin-top: 15px; color: #6b7280; line-height: 1.8;">
+              Browse our products, add items to your cart, and proceed to checkout. You'll need to create an account or log in with your email and password to complete your purchase.
+            </p>
+          </details>
+
+          <details style="padding: 20px; border-bottom: 1px solid #e5e7eb;">
+            <summary style="cursor: pointer; font-weight: 600; color: var(--primary);">What's the shipping time?</summary>
+            <p style="margin-top: 15px; color: #6b7280; line-height: 1.8;">
+              We typically process orders within 1-2 business days and ship them within 3-5 business days. Delivery usually takes 7-10 business days depending on your location.
+            </p>
+          </details>
+
+          <details style="padding: 20px; border-bottom: 1px solid #e5e7eb;">
+            <summary style="cursor: pointer; font-weight: 600; color: var(--primary);">Do you offer free shipping?</summary>
+            <p style="margin-top: 15px; color: #6b7280; line-height: 1.8;">
+              Yes! We offer free standard shipping on all orders. You'll receive a tracking number via email once your order ships.
+            </p>
+          </details>
+
+          <details style="padding: 20px; border-bottom: 1px solid #e5e7eb;">
+            <summary style="cursor: pointer; font-weight: 600; color: var(--primary);">What's your return policy?</summary>
+            <p style="margin-top: 15px; color: #6b7280; line-height: 1.8;">
+              We accept returns within 30 days of purchase for unused items in original packaging. Contact our support team for a return authorization.
+            </p>
+          </details>
+
+          <details style="padding: 20px; border-bottom: 1px solid #e5e7eb;">
+            <summary style="cursor: pointer; font-weight: 600; color: var(--primary);">How can I track my order?</summary>
+            <p style="margin-top: 15px; color: #6b7280; line-height: 1.8;">
+              After your order ships, you'll receive an email with a tracking number. Use this number to track your package on the carrier's website.
+            </p>
+          </details>
+
+          <details style="padding: 20px;">
+            <summary style="cursor: pointer; font-weight: 600; color: var(--primary);">Is my payment information secure?</summary>
+            <p style="margin-top: 15px; color: #6b7280; line-height: 1.8;">
+              Yes, we use SSL encryption and PCI compliance to protect your payment information. Your credit card details are never stored on our servers.
+            </p>
+          </details>
+        </div>
+      </section>
+
+      <section>
+        <h2 style="margin-bottom: 20px;">Contact Support</h2>
+        <p style="color: #6b7280; margin-bottom: 20px;">
+          Can't find the answer you're looking for? Our support team is here to help!
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+          <div style="background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+            <h3 style="margin-bottom: 10px; color: var(--primary);">Email Support</h3>
+            <p style="color: #6b7280; margin-bottom: 15px;">Response time: Within 24 hours</p>
+            <a href="mailto:support@shophub.com" class="btn-primary" style="text-decoration: none; display: inline-block; padding: 10px 20px;">Email Us</a>
+          </div>
+
+          <div style="background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+            <h3 style="margin-bottom: 10px; color: var(--primary);">Phone Support</h3>
+            <p style="color: #6b7280; margin-bottom: 15px;">Available: 9 AM - 6 PM EST</p>
+            <a href="tel:1-800-7464482" class="btn-primary" style="text-decoration: none; display: inline-block; padding: 10px 20px;">Call Us</a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>About ShopHub</h4>
+          <p>Your trusted online shopping destination with premium products and great prices.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="products.html">Shop</a></li>
+            <li><a href="help.html">Help & Support</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact</h4>
+          <p>Email: support@shophub.com</p>
+          <p>Phone: 1-800-SHOPHUB</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 ShopHub. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="authModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeAuthModal()">&times;</span>
+      <div class="auth-container">
+        <div class="auth-toggle">
+          <button class="tab-btn active" onclick="switchAuth('login')">Login</button>
+          <button class="tab-btn" onclick="switchAuth('signup')">Sign Up</button>
+        </div>
+        <form id="loginForm" class="auth-form active" onsubmit="handleLogin(event)">
+          <h3>Login to Your Account</h3>
+          <div class="form-group">
+            <label for="loginEmail">Email</label>
+            <input type="email" id="loginEmail" required>
+          </div>
+          <div class="form-group">
+            <label for="loginPassword">Password</label>
+            <input type="password" id="loginPassword" required>
+          </div>
+          <button type="submit" class="btn-primary btn-full">Login</button>
+        </form>
+        <form id="signupForm" class="auth-form" onsubmit="handleSignup(event)">
+          <h3>Create Your Account</h3>
+          <div class="form-group">
+            <label for="signupName">Full Name</label>
+            <input type="text" id="signupName" required>
+          </div>
+          <div class="form-group">
+            <label for="signupEmail">Email</label>
+            <input type="email" id="signupEmail" required>
+          </div>
+          <div class="form-group">
+            <label for="signupPassword">Password</label>
+            <input type="password" id="signupPassword" required>
+          </div>
+          <button type="submit" class="btn-primary btn-full">Sign Up</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="api.js"></script>
+  <script src="cart.js"></script>
+  <script src="app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      updateAuthUI();
+      window.onclick = (event) => {
+        const modal = document.getElementById('authModal');
+        if (event.target === modal) closeAuthModal();
+      };
+    });
+  </script>
+</body>
+</html>
