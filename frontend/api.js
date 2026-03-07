@@ -1,5 +1,5 @@
 // ✅ FIX: Updated to port 5000 (backend), since Next.js runs on 3000
-const API_BASE_URL = 'https://shophub-backend-qoma.onrender.com';
+const API_BASE_URL = 'https://shophub-backend-qoma.onrender.com/api';
 
 class API {
   // Auth Methods
