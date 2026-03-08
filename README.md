@@ -1,6 +1,7 @@
 # ShopHub - Full-Stack E-Commerce Store
 
 A complete full-stack e-commerce application built with Express.js, MongoDB, and pure HTML/CSS frontend.
+Demo Video:-
 https://drive.google.com/file/d/1RY-JikriePz11wDfOX5MoUQ0uVBblW6O/view?usp=sharing
 
 ## Project Structure
